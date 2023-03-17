@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <CubeBlocks>
+
+    <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+      <Id>
+        <TypeId>ConveyorSorter</TypeId>
+        <SubtypeId>CLBX20</SubtypeId>
+      </Id>
+      <DisplayName>Clan LBX-20</DisplayName>
+      <Description>Kill Inners. Cockpit snipe Atlases. Melee a Griffin into a fusion core. Slam dunk a Locust into the trashcan. Crucify filthy Banshees. Launch Cataphracts into the sun. Stir fry Maulers in a forge. Toss Zeus into active volcanoes. Urinate into a Crab's fuel tank. Judo throw Maulers into an LRM barrage. Twist Stalker cockpits off. Report Inners to ComStar. Axe chop Spiders in half. Curb stomp Inner jump ships. Trap Panthers in quicksand. Crush Orions in the trash compactor. Liquefy Ravens in a vat of acid. Send Inners to the interrogation chamber. Cremate Firestarters with a flamer. Mandatory self destruct for Inners. 
+      </Description>
+      <Icon>Textures\Icons\LBX5.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <GuiVisible>true</GuiVisible>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="2" y="2" z="10"/>
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\LBX5_Main.mwm</Model>
+      <Components>
+        <Component Subtype="Construction" Count="2000" />
+        <Component Subtype="GravityGenerator" Count="200" />
+        <Component Subtype="Computer" Count="120" />
+        <Component Subtype="SmallTube" Count="1060" />
+        <Component Subtype="Motor" Count="1080" />
+        <Component Subtype="LargeTube" Count="1200" />
+        <Component Subtype="MetalGrid" Count="650" />
+        <Component Subtype="Construction" Count="4000" />
+        <Component Subtype="SteelPlate" Count="500" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00" Default="true"/>
+        <MountPoint Side="Left" StartX="8.00" StartY="0.00" EndX="10.00" EndY="2.00"/>
+        <MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+        <MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+        <MountPoint Side="Bottom" StartX="0.00" StartY="8.00" EndX="2.00" EndY="10.00"/>
+      </MountPoints>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BlockPairName>CLBX20</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>125</BuildTimeSeconds>
+      <DisassembleRatio>5</DisassembleRatio>
+      <NavigationDefinition>Default</NavigationDefinition>
+      <WeaponDefinitionId Subtype="CLBX20" />
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <InventoryMaxVolume>100</InventoryMaxVolume>
+      <MinElevationDegrees>-1</MinElevationDegrees>
+      <MaxElevationDegrees>1</MaxElevationDegrees>
+      <MinAzimuthDegrees>-1</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>1</MaxAzimuthDegrees>
+      <IdleRotation>false</IdleRotation>
+      <AiEnabled>false</AiEnabled>
+      <MaxRangeMeters>10000</MaxRangeMeters>
+      <RotationSpeed>0</RotationSpeed>
+      <ElevationSpeed>0</ElevationSpeed>
+      <MinFov>0.1</MinFov>
+      <MaxFov>1.1</MaxFov>
+    </Definition>
+
+  </CubeBlocks>
+  <BlueprintClassEntries>
+  </BlueprintClassEntries>
+</Definitions>
