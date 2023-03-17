@@ -1,4 +1,4 @@
 mode 1: consumes projectiles
 mode 2: attacks grids
 
-gets stronger, but loses health
+gets stronger, but loses health?
