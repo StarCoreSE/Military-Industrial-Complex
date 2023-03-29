@@ -6,18 +6,18 @@
     <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
       <Id>
         <TypeId>ConveyorSorter</TypeId>
-        <SubtypeId>CLBX20</SubtypeId>
+        <SubtypeId>CLBX5</SubtypeId>
       </Id>
-      <DisplayName>Clan LBX-20</DisplayName>
+      <DisplayName>Clan LBX-5</DisplayName>
       <Description>Kill Inners. Cockpit snipe Atlases. Melee a Griffin into a fusion core. Slam dunk a Locust into the trashcan. Crucify filthy Banshees. Launch Cataphracts into the sun. Stir fry Maulers in a forge. Toss Zeus into active volcanoes. Urinate into a Crab's fuel tank. Judo throw Maulers into an LRM barrage. Twist Stalker cockpits off. Report Inners to ComStar. Axe chop Spiders in half. Curb stomp Inner jump ships. Trap Panthers in quicksand. Crush Orions in the trash compactor. Liquefy Ravens in a vat of acid. Send Inners to the interrogation chamber. Cremate Firestarters with a flamer. Mandatory self destruct for Inners. 
       </Description>
       <Icon>Textures\Icons\LBX5.dds</Icon>
       <CubeSize>Large</CubeSize>
       <GuiVisible>true</GuiVisible>
       <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="2" y="2" z="10"/>
+      <Size x="1" y="1" z="5"/>
       <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Cubes\LBX5_Main.mwm</Model>
+      <Model>Models\Cubes\LB5-X.mwm</Model>
       <Components>
         <Component Subtype="Construction" Count="2000" />
         <Component Subtype="GravityGenerator" Count="200" />

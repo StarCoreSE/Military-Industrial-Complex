@@ -11,13 +11,13 @@ using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef.Hardwar
 namespace Scripts {   
     partial class Parts {
         // Don't edit above this line
-        WeaponDefinition CLBX20 => new WeaponDefinition
+        WeaponDefinition CLBX5 => new WeaponDefinition
         {
             Assignments = new ModelAssignmentsDef
             {
                 MountPoints = new[] {
                     new MountPointDef {
-                        SubtypeId = "CLBX20", // Block Subtypeid. Your Cubeblocks contain this information
+                        SubtypeId = "CLBX5", // Block Subtypeid. Your Cubeblocks contain this information
                         SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns. Subpart_Boomsticks must be written as Boomsticks.
                         MuzzlePartId = "None", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
                         AzimuthPartId = "None", // Your Rotating Subpart, the bit that moves sideways.
@@ -28,10 +28,11 @@ namespace Scripts {
                     
                  },
                 Muzzles = new[] {
-                    "muzzle_01", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
+                    "Muzzle_01", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
+                    "Muzzle_02", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
                 },
                 Ejector = "", // Optional; empty from which to eject "shells" if specified.
-                Scope = "muzzle_01", // Where line of sight checks are performed from. Must be clear of block collision.
+                Scope = "Muzzle_01", // Where line of sight checks are performed from. Must be clear of block collision.
             },
             Targeting = new TargetingDef
             {
@@ -54,7 +55,7 @@ namespace Scripts {
             },
             HardPoint = new HardPointDef
             {
-                PartName = "Clan LBX-20", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+                PartName = "Clan LBX-5", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
                 DeviateShotAngle = 0.2f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 180f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Advanced, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
@@ -116,9 +117,9 @@ namespace Scripts {
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 12, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
+                    RateOfFire = 60, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
-                    TrajectilesPerBarrel = 20, // Number of projectiles per muzzle per fire event.
+                    TrajectilesPerBarrel = 5, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
                     ReloadTime = 300, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
@@ -128,7 +129,7 @@ namespace Scripts {
                     Cooldown = 0.10f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
                     HeatSinkRate = 100, // Amount of heat lost per second.
                     DegradeRof = false, // Progressively lower rate of fire when over 80% heat threshold (80% of max heat).
-                    ShotsInBurst = 1, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
+                    ShotsInBurst = 2, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
                     DelayAfterBurst = 0, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFull = false, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
                     GiveUpAfter = false, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
@@ -143,7 +144,7 @@ namespace Scripts {
                 {
                     PreFiringSound = "", // Audio for warmup effect.
                     FiringSound = "CLBXFire", // Audio for firing.
-                    FiringSoundPerShot = false, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
+                    FiringSoundPerShot = true, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
                     ReloadSound = "", // Sound SubtypeID, for when your Weapon is in a reloading state
                     NoAmmoSound = "",
                     HardPointRotationSound = "", // Audio played when turret is moving.
@@ -171,7 +172,7 @@ namespace Scripts {
             },
             Ammos = new[] {
 
-                CLBX20_ammo
+                CLBX5_ammo
 
                  // Must list all primary, shrapnel, and pattern ammos.
 

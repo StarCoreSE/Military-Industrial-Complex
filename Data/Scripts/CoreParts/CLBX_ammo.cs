@@ -30,13 +30,13 @@ namespace Scripts
 { // Don't edit above this line
     partial class Parts
     {
-        private AmmoDef CLBX20_ammo => new AmmoDef // Your ID, for slotting into the Weapon CS
+        private AmmoDef CLBX5_ammo => new AmmoDef // Your ID, for slotting into the Weapon CS
         {
             AmmoMagazine = "Energy", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
-            AmmoRound = "CLBX20ammo", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
+            AmmoRound = "CLBX5ammo", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = true, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0.5f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 9000f, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 36000f, // Direct damage; one steel plate is worth 100.
             Mass = 40f, // In kilograms; how much force the impact will apply to the target.
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 4100000f, // Recoil. This is applied to the Parent Grid.
@@ -44,7 +44,7 @@ namespace Scripts
                                //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
                                //If greater than cube integrity it will remove the cube upon firing, without causing deformation (makes it look like the whole "block" flew away)
             HardPointUsable = true, // Whether this is a primary ammo type fired directly by the turret. Set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
-            EnergyMagazineSize = 1, // For energy weapons, how many shots to fire before reloading.
+            EnergyMagazineSize = 2, // For energy weapons, how many shots to fire before reloading.
             IgnoreWater = false, // Whether the projectile should be able to penetrate water when using WaterMod.
             IgnoreVoxels = false, // Whether the projectile should be able to penetrate voxels.
             Synchronize = false, // For future use

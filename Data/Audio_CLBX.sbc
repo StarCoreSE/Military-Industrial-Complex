@@ -12,7 +12,7 @@
       <PreventSynchronization>0</PreventSynchronization>
       <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
       <DynamicMusicAmount>35</DynamicMusicAmount>
-      <Volume>3</Volume>
+      <Volume>0.4</Volume>
       <PitchVariation>100</PitchVariation>
       <Loopable>false</Loopable>
       <Waves>
@@ -39,7 +39,7 @@
 		  <PreventSynchronization>0</PreventSynchronization>
 		  <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
 		  <DynamicMusicAmount>35</DynamicMusicAmount>
-		  <Volume>3</Volume>
+		  <Volume>1</Volume>
           <PitchVariation>100</PitchVariation>
 		  <DistantSounds>
 			  <DistantSound DistanceCrossFade="10" Distance="800" Sound = "CLBXMyHeavyDistantHit" />
@@ -67,7 +67,7 @@
 		  <PreventSynchronization>0</PreventSynchronization>
 		  <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
 		  <DynamicMusicAmount>35</DynamicMusicAmount>
-		  <Volume>2.5</Volume>
+		  <Volume>1</Volume>
           <PitchVariation>100</PitchVariation>
 		  <Loopable>false</Loopable>
 		  <Waves>
