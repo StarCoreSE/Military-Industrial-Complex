@@ -11,13 +11,13 @@ using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef.Hardwar
 namespace Scripts {   
     partial class Parts {
         // Don't edit above this line
-        WeaponDefinition CLBX5 => new WeaponDefinition
+        WeaponDefinition CLB2X => new WeaponDefinition
         {
             Assignments = new ModelAssignmentsDef
             {
                 MountPoints = new[] {
                     new MountPointDef {
-                        SubtypeId = "CLBX5", // Block Subtypeid. Your Cubeblocks contain this information
+                        SubtypeId = "CLB2X", // Block Subtypeid. Your Cubeblocks contain this information
                         SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns. Subpart_Boomsticks must be written as Boomsticks.
                         MuzzlePartId = "None", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
                         AzimuthPartId = "None", // Your Rotating Subpart, the bit that moves sideways.
@@ -55,7 +55,7 @@ namespace Scripts {
             },
             HardPoint = new HardPointDef
             {
-                PartName = "Clan LBX-5", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+                PartName = "Clan LB2-X", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
                 DeviateShotAngle = 0.2f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 180f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Advanced, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
@@ -172,7 +172,7 @@ namespace Scripts {
             },
             Ammos = new[] {
 
-                CLBX5_ammo
+                CLB2X_ammo
 
                  // Must list all primary, shrapnel, and pattern ammos.
 
