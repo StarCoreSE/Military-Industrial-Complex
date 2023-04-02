@@ -11,7 +11,7 @@
       <DisplayName>Clan LB2-X</DisplayName>
       <Description>Kill Inners. Cockpit snipe Atlases. Melee a Griffin into a fusion core. Slam dunk a Locust into the trashcan. Crucify filthy Banshees. Launch Cataphracts into the sun. Stir fry Maulers in a forge. Toss Zeus into active volcanoes. Urinate into a Crab's fuel tank. Judo throw Maulers into an LRM barrage. Twist Stalker cockpits off. Report Inners to ComStar. Axe chop Spiders in half. Curb stomp Inner jump ships. Trap Panthers in quicksand. Crush Orions in the trash compactor. Liquefy Ravens in a vat of acid. Send Inners to the interrogation chamber. Cremate Firestarters with a flamer. Mandatory self destruct for Inners. 
       </Description>
-      <Icon>Textures\Icons\LBX5.dds</Icon>
+      <Icon>Textures\Icons\LB2-X.dds</Icon>
       <CubeSize>Large</CubeSize>
       <GuiVisible>true</GuiVisible>
       <BlockTopology>TriangleMesh</BlockTopology>
