@@ -10,7 +10,7 @@ namespace Scripts
             // Enable your definitions using the follow syntax:
             // PartDefinitions(Your1stDefinition, Your2ndDefinition, Your3rdDefinition);
             // PartDefinitions includes both weapons and phantoms
-            PartDefinitions(SLAM, MetalStorm, CLB2X);
+            PartDefinitions(SLAM, MetalStorm, CLB2X, BALLER);
         }
     }
 }
