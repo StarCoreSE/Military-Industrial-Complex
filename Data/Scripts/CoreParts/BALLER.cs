@@ -173,7 +173,16 @@ namespace Scripts {
             Ammos = new[] {
 
                 BALLER_ammo,
-                BALLER_ammo_bounce
+                BALLER_ammo_bounce1,
+                BALLER_ammo_bounce2,
+                BALLER_ammo_bounce3,
+                BALLER_ammo_bounce4,
+                BALLER_ammo_bounce5,
+                BALLER_ammo_bounce6,
+                BALLER_ammo_bounce7,
+                BALLER_ammo_bounce8,
+                BALLER_ammo_bounce9,
+                BALLER_ammo_bounce10
 
                  // Must list all primary, shrapnel, and pattern ammos.
 
