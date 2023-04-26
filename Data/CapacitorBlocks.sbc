@@ -1,0 +1,166 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+            <Id>
+				<TypeId>OxygenTank</TypeId>
+				<SubtypeId>Capacitor</SubtypeId>
+			</Id>
+			<DisplayName>Capacitor</DisplayName>
+			<Description>Stores high-voltage power from CapacitCore.</Description>
+			<Icon>Textures\GUI\Icons\AstronautBackpack.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="4" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Capacitor.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10"/>
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0"/>
+			<BlockPairName>Capacitor</BlockPairName>
+            <EdgeType>Light</EdgeType>
+            <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+            <ResourceSinkGroup>Factory</ResourceSinkGroup>
+            <OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+            <StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+            <Capacity>60</Capacity> <!-- 1 unit = 1gw second -->
+			
+            <InventoryMaxVolume>0</InventoryMaxVolume>
+            <InventorySize>
+                <X>2</X>
+                <Y>2</Y>
+                <Z>2</Z>
+            </InventorySize>
+            <StoredGasId>
+                <TypeId>GasProperties</TypeId>
+                <SubtypeId>CapacitCoreCharge</SubtypeId>
+            </StoredGasId>
+            <BlueprintClasses>
+                <Class>HydrogenBottles</Class>
+            </BlueprintClasses>
+            <GasExplosionDamageMultiplier>0</GasExplosionDamageMultiplier>
+            <GasExplosionSound>HydrogenExplosion</GasExplosionSound>
+            <GasExplosionEffect>Explosion_Warhead_30</GasExplosionEffect>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>300</unsignedInt>
+                <unsignedInt>600</unsignedInt>
+            </TieredUpdateTimes>
+        </Definition>
+		
+		
+		<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+            <Id>
+				<TypeId>OxygenGenerator</TypeId>
+				<SubtypeId>Charger</SubtypeId>
+			</Id>
+			<DisplayName>Capacitor Charging Unit</DisplayName>
+			<Description>Steps vanilla power up to high-voltage CapacitCore power at a 75% efficiency.</Description>
+			<Icon>Textures\GUI\Icons\AstronautBackpack.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="1" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Charger.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10"/>
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0"/>
+			<BlockPairName>Charger</BlockPairName>
+			
+            <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+            <ResourceSinkGroup>Factory</ResourceSinkGroup>
+            <IceConsumptionPerSecond>1</IceConsumptionPerSecond>
+            <InventoryMaxVolume>4</InventoryMaxVolume>
+            <InventorySize>
+                <X>2</X>
+                <Y>2</Y>
+                <Z>2</Z>
+            </InventorySize>
+
+            <InventoryFillFactorMin>0.3</InventoryFillFactorMin>
+            <InventoryFillFactorMax>0.6</InventoryFillFactorMax>
+
+            <FuelPullAmountFromConveyorInMinutes>2.2</FuelPullAmountFromConveyorInMinutes>
+
+            <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+            <OperationalPowerConsumption>666.667</OperationalPowerConsumption>
+            <ProducedGases>
+                <GasInfo>
+                    <Id>
+                        <TypeId>GasProperties</TypeId>
+                        <SubtypeId>CapacitCoreCharge</SubtypeId>
+                    </Id>
+                    <IceToGasRatio>0.25</IceToGasRatio>
+                </GasInfo>
+            </ProducedGases>
+            <BlueprintClasses>
+                <Class>Ice</Class>
+            </BlueprintClasses>
+            <TieredUpdateTimes>
+                <unsignedInt>300</unsignedInt>
+                <unsignedInt>600</unsignedInt>
+                <unsignedInt>1200</unsignedInt>
+            </TieredUpdateTimes>
+        </Definition>
+		
+		<Definition xsi:type="MyObjectBuilder_HydrogenEngineDefinition">
+            <Id>
+                <TypeId>HydrogenEngine</TypeId>
+                <SubtypeId>CapacitorGenerator</SubtypeId>
+            </Id>
+            <DisplayName>Capacitor Discarging Unit</DisplayName>
+            <Description>Steps high-voltage CapacitCore power down to vanilla.</Description>
+            <Icon>Textures\GUI\Icons\Cubes\HydrogenEngineLarge.dds</Icon>
+            <CubeSize>Large</CubeSize>
+            <GuiVisible>false</GuiVisible>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="1" y="2" z="3" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>Models\Discharger.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="80" />
+                <Component Subtype="Construction" Count="60" />
+                <Component Subtype="LargeTube" Count="12" />
+                <Component Subtype="SmallTube" Count="20" />
+                <Component Subtype="Motor" Count="12" />
+                <Component Subtype="Computer" Count="4" />
+                <Component Subtype="PowerCell" Count="1" />
+                <Component Subtype="Construction" Count="10" />
+                <Component Subtype="SteelPlate" Count="20" />
+            </Components>
+            <CriticalComponent Subtype="PowerCell" Index="0" />
+
+            <BlockPairName>CapacitorDischarger</BlockPairName>
+
+            <EdgeType>Light</EdgeType>
+
+            <ResourceSinkGroup>Generators</ResourceSinkGroup>
+            <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+            <MaxPowerOutput>2000</MaxPowerOutput>
+            <FuelCapacity>2</FuelCapacity>
+            <EmissiveColorPreset>Extended</EmissiveColorPreset>
+            <IsAirTight>false</IsAirTight>
+            <InventorySize>
+                <X>1</X>
+                <Y>1</Y>
+                <Z>1</Z>
+            </InventorySize>
+            <FuelInfos>
+                <FuelInfo>
+                    <Id>
+                        <TypeId>GasProperties</TypeId>
+                        <SubtypeId>CapacitCoreCharge</SubtypeId>
+                    </Id>
+                </FuelInfo>
+            </FuelInfos>
+            <FuelProductionToCapacityMultiplier>1</FuelProductionToCapacityMultiplier>
+			
+            <TargetingGroups>
+                <string>PowerSystems</string>
+            </TargetingGroups>
+        </Definition>
+		
+	</CubeBlocks>
+</Definitions>
