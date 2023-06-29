@@ -11,13 +11,13 @@
       <DisplayName>Ballistic Accelerated Lobber Lacking Endless Reloads (BALLER)</DisplayName>
       <Description>he ballin
       </Description>
-      <Icon>Textures\Icons\LB2-X.dds</Icon>
+      <Icon>Textures\Icons\SLAM.png</Icon>
       <CubeSize>Large</CubeSize>
       <GuiVisible>true</GuiVisible>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="1" y="1" z="5"/>
       <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Cubes\LB5-X.mwm</Model>
+      <Model>Models\SLAM_Launcher.mwm</Model>
       <Components>
         <Component Subtype="Construction" Count="2000" />
         <Component Subtype="GravityGenerator" Count="200" />
